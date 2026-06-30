@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { Collections } from "@/components/site/Collections";
@@ -16,22 +15,7 @@ import { FinalCta } from "@/components/site/FinalCta";
 import { BrandMarquee } from "@/components/site/BrandMarquee";
 import { Footer } from "@/components/site/Footer";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Kunafa Day — Authentic Middle Eastern Desserts, Handcrafted Daily" },
-      { name: "description", content: "Premium handcrafted kunafa and Arabic sweets, baked fresh and delivered the same day. Pistachio, chocolate, lotus, and signature gift boxes." },
-      { property: "og:title", content: "Kunafa Day — Authentic Middle Eastern Desserts" },
-      { property: "og:description", content: "Premium handcrafted kunafa and Arabic sweets, baked fresh and delivered the same day." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
-  component: Index,
-});
-
-function Index() {
+export default function App() {
   return (
     <main className="bg-background text-foreground overflow-x-clip">
       <Header />
